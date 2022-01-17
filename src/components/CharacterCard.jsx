@@ -14,16 +14,18 @@ const CharacterCard = ({ character }) => {
         <div>
           <h2>{character.name}</h2>
           <span></span>
-          <p>Alive - Human</p>
+          <p>
+            {character.status} - {character.species}
+          </p>
         </div>
 
         <div>
           <Text color="rgb(158, 158, 158)">Last known location:</Text>
-          <Text>Last known location:</Text>
+          <Text>{character.location.name}</Text>
         </div>
         <div>
           <Text color="rgb(158, 158, 158)">First seen in:</Text>
-          <Text>Last known location:</Text>
+          <Text>{character.origin.name}</Text>
         </div>
       </CharacterCardInner>
     </CharacterCardContainer>

@@ -14,7 +14,10 @@ const Characters = () => {
 
   return (
     <Container>
-      <Heading>Characters {isLoading ? '...' : null}</Heading>
+      <Heading>
+        The Rick and Morty API
+        {isLoading ? ' ...' : null}
+      </Heading>
 
       <CharacterGrid>
         {data?.results?.map((c) => (
@@ -38,6 +41,9 @@ const CharacterGrid = styled.div`
 
 const Heading = styled.h1`
   margin-bottom: 1rem;
+  @media (max-width: 650px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Container = styled.div`

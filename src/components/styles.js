@@ -8,6 +8,11 @@ export const CharacterCardContainer = styled.div`
   height: 220px;
   max-width: 600px;
   width: 100%;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const CharacterImage = styled.img``;
@@ -17,6 +22,11 @@ export const CharacterCardInner = styled.div`
 
   div:not(:last-child) {
     margin-bottom: 1rem;
+  }
+  @media (max-width: 650px) {
+    h2 {
+      font-size: 1.25rem;
+    }
   }
 `;
 
