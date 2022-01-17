@@ -1,8 +1,34 @@
+// containers
+import Characters from './containers/Characters';
+
+// theme provider
+import { ThemeProvider } from 'styled-components';
+
+// theme
+import { theme } from './theme';
+
+// global styles
+import { GlobalStyles } from './global-styles';
+
+// react query
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const client = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
 function App() {
   return (
-    <div>
-      <h1>Almost before we knew it, we had left t</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <QueryClientProvider client={client}>
+        <Characters />
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

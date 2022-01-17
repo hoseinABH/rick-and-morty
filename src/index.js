@@ -3,21 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// theme provider
-import { ThemeProvider } from 'styled-components';
-
-// theme
-import { theme } from './theme';
-
-// global styles
-import { GlobalStyles } from './global-styles';
-
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <App />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

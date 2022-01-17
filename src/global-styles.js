@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 body {
-    background-color:black;
+    background-color:${({ theme }) => theme.palette.bgColor};
     color: white;
 }
 
@@ -11,8 +11,8 @@ body {
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family: "Dongle", sans-serif;
-    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 `;
